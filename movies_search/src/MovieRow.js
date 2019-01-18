@@ -5,7 +5,7 @@ class MovieRow extends React.Component {
     // console.log("Trying to view movie");
     // console.log(this.props.movie.title);
     const url = "https://www.themoviedb.org/movie/" + this.props.movie.id;
-    window.location.href = "http://www.google.com"
+    window.location.href = url
   }
     render(){
         return <table key={this.props.movie.id}>
