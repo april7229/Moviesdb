@@ -30,14 +30,14 @@ this.performSearch()
   }
   performSearch(){
     console.log("Perform search using moviedb");
-    const urlString = "https://api.themoviedb.org/3/search/movie?query=marvel&api_key=1b5adf76a72a13bad99b8fcOc68cbO85";
+    const urlString = "https://api.themoviedb.org/3/search/movie?query=marvel&api_key=1b5adf76a72a13bad99b8fc0c68cb085";
     $.ajax({
        url: urlString,
        success: (searchResults) => {
          console.log("Fetched data successfully");
        },
        error: (xhr, status, err) => {
-         console.error("Failed to fetch data");
+         console.log("Failed to fetch data");
        }
     })
   }
