@@ -55,7 +55,10 @@ this.performSearch("ant man")
     })
   }
   searchChangeHandler(event) {
-    console.log(event.target.value)
+    console.log(event.target.value);
+    const boundObject = this;
+    const searchTerm = event.target.value;
+    this.performSearch(searchTerm);
   }
   render() {
     return (
@@ -81,7 +84,7 @@ this.performSearch("ant man")
          paddingBottom:8,
          paddingLeft:16     
 
-       }}onChange={this.searchChangeHandler} placeholder="Enter search term" />
+       }}onChange={this.searchChangeHandler.bind(this)} placeholder="Enter search term" />
 
        {this.state.rows}
       </div>
