@@ -1,42 +1,49 @@
 import React, { Component } from 'react';
 import './App.css';
+import MovieRow from './MovieRow.js';
+import $ from 'jquery';
 
 class App extends Component {
   constructor(props){
     super(props);
-console.log("This is my initializer");
+    this.state = {};
+// console.log("This is my initializer");
 
-const movies = [
- {id: 0, poster_src:"https://image.tmdb.org/t/p/w185/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg", title: "Avengers: Infinity War", overview:"As the Avengers and their allies have continued to protect the world from threats to large"},
- {id: 1, poster_src:"https://image.tmdb.org/t/p/w185/cezWGskPY5x7GaglTTRN4Fugfb8.jpg", title: "The Avengers", overview:"This is my second overview"},
-]
+// const movies = [
+//  {id: 0, poster_src:"https://image.tmdb.org/t/p/w185/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg", title: "Avengers: Infinity War", overview:"As the Avengers and their allies have continued to protect the world from threats to large"},
+//  {id: 1, poster_src:"https://image.tmdb.org/t/p/w185/cezWGskPY5x7GaglTTRN4Fugfb8.jpg", title: "The Avengers", overview:"This is my second overview"},
+// ]
 
 
 
-var movieRows = [];
-movies.forEach((movie) =>{
-  console.log(movie.title);
-  const movieRow = <table key={movie.id}>
-    <tbody>
-      <tr>
-        <td>
-          <img alt="poster" src={movie.poster_src} />
-        </td>
-        <td>
-        {movie.title}
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  movieRows.push(movieRow);
+// var movieRows = [];
+// movies.forEach((movie) =>{
+//   console.log(movie.title);
+//   const movieRow = < MovieRow movie ={movie} />  
+//   movieRows.push(movieRow);
 
-})
-this.state = {rows: movieRows}
+// })
+
+// this.state = {rows: movieRows}
+
+this.performSearch()
+  }
+  performSearch(){
+    console.log("Perform search using moviedb");
+    const urlString = "https://api.themoviedb.org/3/search/movie?query=marvel&api_key=1b5adf76a72a13bad99b8fcOc68cbO85";
+    $.ajax({
+       url: urlString,
+       success: (searchResults) => {
+         console.log("Fetched data successfully");
+       },
+       error: (xhr, status, err) => {
+         console.error("Failed to fetch data");
+       }
+    })
   }
   render() {
     return (
-      <div className="App">
-      
+      <div>       
        <table className="titleBar"> 
          <tbody>
            <tr>
