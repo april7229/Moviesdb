@@ -8,27 +8,8 @@ class App extends Component
   constructor( props )
   {
     super( props );
-    this.state = {};
-    // console.log("This is my initializer");
-
-    // const movies = [
-    //  {id: 0, poster_src:"https://image.tmdb.org/t/p/w185/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg", title: "Avengers: Infinity War", overview:"As the Avengers and their allies have continued to protect the world from threats to large"},
-    //  {id: 1, poster_src:"https://image.tmdb.org/t/p/w185/cezWGskPY5x7GaglTTRN4Fugfb8.jpg", title: "The Avengers", overview:"This is my second overview"},
-    // ]
-
-
-
-    // var movieRows = [];
-    // movies.forEach((movie) =>{
-    //   console.log(movie.title);
-    //   const movieRow = < MovieRow movie ={movie} />  
-    //   movieRows.push(movieRow);
-
-    // })
-
-    // this.state = {rows: movieRows}
-
-    this.performSearch( "a" )
+    this.state = {};   
+    this.performSearch( "a" );
   }
   performSearch( searchTerm )
   {
@@ -81,12 +62,7 @@ class App extends Component
               </td>
               <td>
                 <h1> MoviesDB Search </h1>
-                <ul>
-                  
-                  <li><a href="toprated.js">TopRated</a></li>
-                  <li><a href="popular.js">Most Popular</a></li>
-                  <li><a href="nowplaying.js">Now Playing</a></li>
-                </ul>
+               
               </td>
             </tr>
           </tbody>
