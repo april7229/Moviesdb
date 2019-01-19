@@ -28,12 +28,14 @@ class App extends Component
 
     // this.state = {rows: movieRows}
 
-    this.performSearch( "ant man" )
+    this.performSearch( "a" )
   }
   performSearch( searchTerm )
   {
     console.log( "Perform search using moviedb" );
     const urlString = "https://api.themoviedb.org/3/search/movie?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=" + searchTerm;
+    
+  
     $.ajax( {
       url: urlString,
       success: ( searchResults ) =>
@@ -79,6 +81,12 @@ class App extends Component
               </td>
               <td>
                 <h1> MoviesDB Search </h1>
+                <ul>
+                  
+                  <li><a href="toprated.js">TopRated</a></li>
+                  <li><a href="popular.js">Most Popular</a></li>
+                  <li><a href="nowplaying.js">Now Playing</a></li>
+                </ul>
               </td>
             </tr>
           </tbody>
