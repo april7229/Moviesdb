@@ -14,8 +14,11 @@ class App extends Component
   performSearch( searchTerm )
   {
     console.log( "Perform search using moviedb" );
-    const urlString = "https://api.themoviedb.org/3/search/movie?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=" + searchTerm;
-    
+    // const urlString = "https://api.themoviedb.org/3/search/movie?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=" + searchTerm;
+    const urlString =
+  'https://api.themoviedb.org/3/movie/now_playing?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=&language=en-US&page=1' +
+  searchTerm
+
   
     $.ajax( {
       url: urlString,
