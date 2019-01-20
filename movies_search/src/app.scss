@@ -1,8 +1,77 @@
+@import "index.scss";
+
 .titleBar {
-  background-Color: #000;
+  background-Color: #000000;
   display: block;
-  color: #fff;
-  padding-Left: 16px;
+  color: #ffffff;
+  border-spacing: 0;
+
+  td {
+    padding: 0 1vw;
+
+    &.logo {
+      width: 100px;
+      padding: 0;
+      text-align: center;
+
+      img {
+        height: $header-content-height;
+        vertical-align: bottom;
+        margin: 1vh 0;
+      }
+    }
+
+    &.title {
+      padding-right: 5vw;
+
+      h1 {
+        font-weight: 100;
+        margin: 0
+      }
+    }
+
+    &.searchBarContainer {
+      input {
+        @include transition(.25s all ease);
+
+        &::placeholder {
+          @include transition(.25s all ease);
+          color: rgba(248, 247, 255, 0.44);
+        }
+
+        &:focus {
+          outline: 0;
+          background: rgb(180, 176, 176);
+          color: black;
+
+          &::placeholder {
+            color: rgb(119, 116, 116);
+          }
+        }
+
+        border: #5d5d5d 1px solid;
+        font-family: $header-font-stack;
+        font-size: 1.2em;
+        background: rgb(45, 44, 44);
+        color: white;
+        height: 5vh;
+        padding: 0 1vw;
+      }
+    }
+
+    .btn {
+      float: left;
+      padding: 1vh 0.5vw;
+      margin: 0 .5vw;
+      background: rgba(253, 238, 202, 0.27);
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+
+      a {
+
+      }
+    }
+  }
 }
 
 .App {
@@ -35,5 +104,33 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.movieRowTable {
+  width: 100%;
+  border-spacing: 0;
+
+  tr {
+    border-bottom: lightgray 1px solid;
+
+    td {
+      &:first-of-type {
+        width: 100px;
+        padding: 0;
+
+        img {
+          width: 100px;
+          vertical-align: bottom;
+        }
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      padding: 0 0 0 1vw;
+      border-bottom: rgba(16, 13, 13, 0.15) 1px solid;
+    }
   }
 }

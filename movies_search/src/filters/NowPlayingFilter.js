@@ -2,15 +2,24 @@ import React from 'react';
 import ListFilter from './ListFilter.js';
 
 class NowPlayingFilter extends ListFilter {
-    viewMovie() {
-        // console.log("Trying to view movie");
-        // console.log(this.props.movie.title);
-        const url = "https://www.themoviedb.org/movie/" + this.props.movie.id;
-        window.location.href = url
+    constructor(props) {
+        super(props);
+        this.state = {};
+        console.log(props);
+    }
+
+    fixState(res) {
+        this.setState({highlight: false});
+
+        if (res == "Now Playing") {
+            this.setState({highlight: true});
+        }
+
+        this.render();
     }
 
     render() {
-        return <ListFilter displayName={"Now Playing"} />
+        return <ListFilter url={this.state.url} {...this.props}  highlight={this.state.highlight}/>
     }
 }
 
