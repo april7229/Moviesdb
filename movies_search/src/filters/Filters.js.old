@@ -1,0 +1,31 @@
+import React from 'react';
+import NowPlayingFilter from "./NowPlayingFilter";
+import AllFilter from "./AllFilter";
+import TopRatedFilter from "./PopularFilter";
+import PopularFilter from "./PopularFilter";
+
+class Filters extends React.Component {
+    constructor(props) {
+        super(props);
+        var selectionState = {notifySelected: this.toggleFilters, selected: "All"};
+        this.state = {props, selectionState};
+        console.log(props);
+    }
+
+    toggleFilters(e) {
+        this.setState({...this.props, notifySelected: this.toggleFilters, selected: "All"});
+        this.render();
+    }
+
+    render() {
+        return <td>
+            <div>
+                <AllFilter {...this.props} selected={this.state.selectionState}/> <TopRatedFilter {...this.props} selected={this.state.selectionState}/> <NowPlayingFilter {...this.props} selected={this.state.selectionState}/> <PopularFilter {...this.props} selected={this.state.selectionState}/>
+            </div>
+        </td>
+    }
+}
+
+export default Filters;
+
+//<div><AllFilter {...this.props}/></div>
