@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
+/* line 7, ../index.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 15, ../index.scss */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* line 3, ../app.scss */
+.titleBar {
+  background-Color: #000000;
+  display: block;
+  color: #ffffff;
+  border-spacing: 0;
+}
+/* line 9, ../app.scss */
+.titleBar td {
+  padding: 0 1vw;
+}
+/* line 12, ../app.scss */
+.titleBar td.logo {
+  width: 100px;
+  padding: 0;
+  text-align: center;
+}
+/* line 17, ../app.scss */
+.titleBar td.logo img {
+  height: 5vh;
+  vertical-align: bottom;
+  margin: 1vh 0;
+}
+/* line 24, ../app.scss */
+.titleBar td.title {
+  padding-right: 5vw;
+}
+/* line 27, ../app.scss */
+.titleBar td.title h1 {
+  font-weight: 100;
+  margin: 0;
+}
+/* line 34, ../app.scss */
+.titleBar td.searchBarContainer input {
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  border: #5d5d5d 1px solid;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.2em;
+  background: #2d2c2c;
+  color: white;
+  height: 5vh;
+  padding: 0 1vw;
+}
+/* line 37, ../app.scss */
+.titleBar td.searchBarContainer input::placeholder {
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  color: rgba(248, 247, 255, 0.44);
+}
+/* line 42, ../app.scss */
+.titleBar td.searchBarContainer input:focus {
+  outline: 0;
+  background: #b4b0b0;
+  color: black;
+}
+/* line 47, ../app.scss */
+.titleBar td.searchBarContainer input:focus::placeholder {
+  color: #777474;
+}
+/* line 62, ../app.scss */
+.titleBar td .btn {
+  float: left;
+  padding: 1vh 0.5vw;
+  margin: 0 .5vw;
+  background: rgba(253, 238, 202, 0.27);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* line 77, ../app.scss */
+.App {
+  text-align: center;
+}
+
+/* line 81, ../app.scss */
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+/* line 86, ../app.scss */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* line 97, ../app.scss */
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* line 110, ../app.scss */
+.movieRowTable {
+  width: 100%;
+  border-spacing: 0;
+}
+/* line 114, ../app.scss */
+.movieRowTable tr {
+  border-bottom: lightgray 1px solid;
+}
+/* line 117, ../app.scss */
+.movieRowTable tr td {
+  padding: 0 0 0 1vw;
+  border-bottom: rgba(16, 13, 13, 0.15) 1px solid;
+}
+/* line 118, ../app.scss */
+.movieRowTable tr td:first-of-type {
+  width: 100px;
+  padding: 0;
+}
+/* line 122, ../app.scss */
+.movieRowTable tr td:first-of-type img {
+  width: 100px;
+  vertical-align: bottom;
+}
+/* line 128, ../app.scss */
+.movieRowTable tr td h3 {
+  margin: 0;
+}

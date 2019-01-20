@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
+import './css/app.css';
 import MovieRow from './MovieRow.js';
 import $ from 'jquery';
 
-class topRated extends Component
+class Popular extends Component
 {
     constructor( props )
     {
@@ -14,8 +14,9 @@ class topRated extends Component
     performSearch( searchTerm )
     {
         console.log( "Perform search using moviedb" );
-       
-        const urlString = " https://api.themoviedb.org/3/movie/top_rated?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=&language=en-US&page=1";
+    
+        const urlString = "http://api.themoviedb.org/3/movie/popular?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=" + searchTerm;
+
 
         $.ajax( {
             url: urlString,
@@ -85,4 +86,4 @@ class topRated extends Component
 }
 
 
-export default topRated;
+export default Popular;
