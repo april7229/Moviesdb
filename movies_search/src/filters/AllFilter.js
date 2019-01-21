@@ -10,7 +10,7 @@ class AllFilter extends ListFilter {
 
     fixState(res) {
         this.state.highlight = false;
-        if (res == "All") {
+        if (res === "All") {
             this.state.highlight = true;
         }
 

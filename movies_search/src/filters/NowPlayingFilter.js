@@ -11,7 +11,7 @@ class NowPlayingFilter extends ListFilter {
     fixState(res) {
         this.setState({highlight: false});
 
-        if (res == "Now Playing") {
+        if (res === "Now Playing") {
             this.setState({highlight: true});
         }
 

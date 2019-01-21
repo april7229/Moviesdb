@@ -10,7 +10,7 @@ class TopRatedFilter extends ListFilter {
 
     fixState(res) {
         this.state.highlight = false;
-        if (res == "Top Rated") {
+        if (res === "Top Rated") {
             this.state.highlight = true;
         }
 

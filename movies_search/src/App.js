@@ -4,41 +4,41 @@ import MovieRow from './MovieRow.js';
 import $ from 'jquery';
 import Filters from "./filters/Filters";
 
-<<<<<<< HEAD
-class App extends Component
-{
-  constructor( props )
-  {
-    super( props );
-    this.state = {};   
-    this.performSearch( "a" );
-  }
-  performSearch( searchTerm )
-  {
-    console.log( "Perform search using moviedb" );
-    // const urlString = "https://api.themoviedb.org/3/search/movie?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=" + searchTerm;
-    const urlString =
-  'https://api.themoviedb.org/3/movie/now_playing?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=&language=en-US&page=1' +
-  searchTerm
+
+// class App extends Component
+// {
+//   constructor( props )
+//   {
+//     super( props );
+//     this.state = {};   
+//     this.performSearch( "a" );
+//   }
+//   performSearch( searchTerm )
+//   {
+//     console.log( "Perform search using moviedb" );
+//     // const urlString = "https://api.themoviedb.org/3/search/movie?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=" + searchTerm;
+//     const urlString =
+//   'https://api.themoviedb.org/3/movie/now_playing?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=&language=en-US&page=1' +
+//   searchTerm
 
   
-    $.ajax( {
-      url: urlString,
-      success: ( searchResults ) =>
-      {
-        console.log( "Fetched data successfully" );
-        //  console.log(searchResults);
-        const results = searchResults.results
-        // console.log(results[0]);
-=======
+//     $.ajax( {
+//       url: urlString,
+//       success: ( searchResults ) =>
+//       {
+//         console.log( "Fetched data successfully" );
+//         //  console.log(searchResults);
+//         const results = searchResults.results
+//         // console.log(results[0]);
+
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {filter: "All", query: "", baseurl: "https://api.themoviedb.org/3/search/movie?api_key=1b5adf76a72a13bad99b8fc0c68cb085"};
+        this.state = {filter: "All", query: "a", baseurl: "https://api.themoviedb.org/3/search/movie?api_key=1b5adf76a72a13bad99b8fc0c68cb085"};
         this.filterChangeHandler = this.filterChangeHandler.bind(this);
         this.searchChangeHandler = this.searchChangeHandler.bind(this);
     }
->>>>>>> c7fae18811891db98db926746076eea9f160b585
+
 
     performSearch(value, baseurl) {
         console.log("Perform search using moviedb");
